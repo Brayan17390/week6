@@ -138,50 +138,63 @@ sample_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 print(len(sample_list)) # Output: 3
 #this is called a nested list
 # Extract and print the second element from the first list
-
+print(sample_list[0][1]) # output: 2
+print(sample_list[1][2]) # output: 6
+print(sample_list[2][0]) # output: 7
+print(sample_list[2][1]) # output: 8
 
 sample_list_of_fruit = {"fruits": ["apple", "banana", "cherry"]}
 # Extract and print the second fruit from the list
-
+print(sample_list_of_fruit["fruits"][1]) # output: 'banana'
 
 sample_list_of_lists = {"lists": [[1, 2, 3], [4, 5, 6], [7, 8, 9]]}
 # Extract and print the third element from the second list
-
-
+print(sample_list_of_lists["lists"][1][-1]) # output: 6
+print(sample_list_of_lists["lists"][2][-2]) # output: 8
+print(sample_list_of_lists["lists"][0][-1]) # output: 3
+print(sample_list_of_lists["lists"][2][0]) # output: 7
 
 
 sample_list_of_dicts = {"dicts": [{"name": "Alice", "age": 25}, {"name": "Bob", "age": 30}, {"name": "Charlie", "age": 35}]}
 # Extract and print the age of the second person
-
-
+print(sample_list_of_dicts["dicts"][1]["age"]) # output: 30
+print(sample_list_of_dicts["dicts"][2]["name"])
+print(sample_list_of_dicts["dicts"][0]["age"])
 
 
 
 
 data = {
-    "fruits": {"tropical": ["mango", "pineapple", "banana"], "berries": ["strawberry", "blueberry", "raspberry"]},
+    "fruits": {"tropical": ["mango", "pineapple", "banana"], 
+                "berries": ["strawberry", "blueberry", "raspberry"]},
     "prices": {"mango": 1.5, "pineapple": 2.5, "banana": 0.5}
 }
 
 
 # Extract and print the second item from the 'tropical' list
-print(data["fruits"]["tropical"][1])  # Output: 'pineapple'
-
+print(data["fruits"]["tropical"][1]) # output: 'pineapple'
+print(data["fruits"]["berries"][2]) # output: 'raspberry
+print(data["prices"]["mango"]) # output: '1.5
+print(data["prices"]["banana"]) # output: '0.5
 
 
 
 # Define the dictionary
 info = {
-    "team": {"coach": {"name": "John Doe", "age": 45}, "players": ["Alice", "Bob", "Charlie"]},
+    "team": {"coach": {"name": "John Doe", "age": 45}, 
+             "players": ["Alice", "Bob", "Charlie"]},
     "location": "New York"
 }
 
 
 # Extract and print the coach's name
 print(info["team"]["coach"]["name"])  # Output: 'John Doe'
-
-
-
+# get the age of the coach
+print(info["team"]["coach"]["age"])
+# get the third player
+print(info["team"]["players"][2])
+# get the location
+print(info["location"])
 
 # Define the dictionary
 company = {
@@ -197,9 +210,14 @@ company = {
     }
 }
 
-
+hr_budget = 50000
+engineering_budget = 120000
+total = hr_budget + engineering_budget
+print(total)
 # Extract and print the second employee from the 'Engineering' department
 print(company["departments"]["Engineering"]["employees"][1])  # Output: 'Noah'
+print(company["departments"]["Engineering"]["budget"])
+
 
 
 # Define the dictionary
